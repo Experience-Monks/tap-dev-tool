@@ -1,6 +1,6 @@
 {
   "name": "tap-dev-tool",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "prettifies TAP in the browser's console",
   "main": "index.js",
   "license": "MIT",
