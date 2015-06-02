@@ -9,6 +9,8 @@ module.exports = function errorify (b) {
   var written = false
   var bundle = b.bundle.bind(b)
   b.bundle = function (cb) {
+    written = false
+    
     var output = through(write)
     var pipeline = bundle(cb)
     pipeline.pipe(output)
