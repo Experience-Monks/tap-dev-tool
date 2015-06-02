@@ -22,7 +22,7 @@
   "scripts": {
     "test": "node test.js",
     "build": "browserify register.js | uglifyjs -cm > dist/build.js",
-    "build-demo": "browserify test/test-plugin.js | uglifyjs -cm > demo/bundle.js",
+    "build-demo": "browserify test/test-plugin.js -p ./ | uglifyjs -cm > demo/bundle.js",
     "prepublish": "npm run build",
     "start": "budo test/test-plugin.js:bundle.js --dir demo --live --verbose -p ./ | garnish"
   },
