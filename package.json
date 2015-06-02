@@ -1,0 +1,49 @@
+{
+  "name": "tap-dev-tool",
+  "version": "1.0.0",
+  "description": "prettifies TAP in the browser's console",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Matt DesLauriers",
+    "email": "dave.des@gmail.com",
+    "url": "https://github.com/mattdesl"
+  },
+  "dependencies": {
+    "browserify": "^10.2.3",
+    "through2": "^0.6.5"
+  },
+  "devDependencies": {
+    "tape": "^4.0.0",
+    "uglify-js": "^2.4.23"
+  },
+  "scripts": {
+    "test": "node test.js",
+    "build": "browserify register.js | uglifyjs -cm > dist/build.js",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "tap",
+    "browser",
+    "visualize",
+    "tape",
+    "test",
+    "tests",
+    "console",
+    "log",
+    "pretty",
+    "css",
+    "color",
+    "colors",
+    "colour",
+    "colours"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Jam3/tap-dev-tool.git"
+  },
+  "homepage": "https://github.com/Jam3/tap-dev-tool",
+  "bugs": {
+    "url": "https://github.com/Jam3/tap-dev-tool/issues"
+  }
+}
