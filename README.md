@@ -2,7 +2,7 @@
 
 [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
 
-[(Click for a live demo)](https://github.com/Jam3/tap-dev-tool/demo)
+[(Click for a live demo)](https://jam3.github.io/tap-dev-tool/demo/)
 
 Prettify TAP output in Chrome/FireFox DevTools console. Works best with [tape](https://www.npmjs.com/package/tape).
 
