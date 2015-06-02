@@ -52,7 +52,7 @@ test('should do something', function (t) {
 - [hihat](https://github.com/Jam3/hihat) - launches DevTools in a new process
 - [tap-browser-el](https://www.npmjs.com/package/tap-browser-el)
 - [tap-browser-color](https://www.npmjs.com/package/tap-browser-color)
-- [tap-console-parser](https://www.npmjs.com/package/tap-browser-color)
+- [tap-console-parser](https://www.npmjs.com/package/tap-console-parser)
 
 ## License
 
