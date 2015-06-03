@@ -2,7 +2,7 @@
 
 [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
 
-[(Click for a live demo)](https://github.com/Jam3/tap-dev-tool/demo)
+[(Click for a live demo)](https://jam3.github.io/tap-dev-tool/demo/)
 
 Prettify TAP output in Chrome/FireFox DevTools console. Works best with [tape](https://www.npmjs.com/package/tape).
 
@@ -52,7 +52,7 @@ test('should do something', function (t) {
 - [hihat](https://github.com/Jam3/hihat) - launches DevTools in a new process
 - [tap-browser-el](https://www.npmjs.com/package/tap-browser-el)
 - [tap-browser-color](https://www.npmjs.com/package/tap-browser-color)
-- [tap-console-parser](https://www.npmjs.com/package/tap-browser-color)
+- [tap-console-parser](https://www.npmjs.com/package/tap-console-parser)
 
 ## License
 

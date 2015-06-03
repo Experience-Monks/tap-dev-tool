@@ -2,6 +2,7 @@ var fails = []
 var tests = {}
 var start = null
 var isTAP = require('./lib/is-tap-string')
+var previousLog = ''
 
 var parser = require('tap-console-parser')()
 .on('complete', function (output) {
@@ -21,6 +22,17 @@ var parser = require('tap-console-parser')()
 
       asserts.forEach(function (fail) {
         console.log('%c     ⨯ ' + fail.name, 'font-weight: bold; color: #c32b2b')
+
+        console.log('%c     ---', '')
+        var str = fail.error.raw
+            .split('\n')
+            .map(function (x) {
+              return '   ' + x
+            })
+            .join('\n')
+
+        console.log(str)
+        console.log('%c     ...', '')
       })
     })
     console.log('')
@@ -52,15 +64,6 @@ var parser = require('tap-console-parser')()
       fails[assert.test] = [ assert ]
 
     parser.log('%c   ⨯ ' + assert.name, 'color: #c32b2b; font-weight: bold')
-
-    parser.log('%c   ---', '')
-    parser.log('%c     operator: ' + assert.error.operator, '')
-    if (assert.error.operator !== 'fail') {
-      parser.log('%c     expected: ' + assert.error.expected, '')
-      parser.log('%c     actual:   ' + assert.error.actual, '')
-    }
-
-    parser.log('%c   ...', '')
   }
 })
 .on('test', function (test) {
@@ -74,6 +77,10 @@ var parser = require('tap-console-parser')()
 .on('log', function (args) {
   // allow comments to print as per normal
   var str = args.join(' ')
-  if (str && !isTAP(str))
-    parser.log.apply(null, args)
+  if (str && !isTAP(str)) {
+    if (!previousLog || !/^\s*(expected|actual|at)\:\s*$/.test(previousLog)) {
+      parser.log.apply(null, args)
+    }
+  }
+  previousLog = str
 })
