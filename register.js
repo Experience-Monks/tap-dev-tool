@@ -2,7 +2,6 @@ var fails = []
 var tests = {}
 var start = null
 var isTAP = require('./lib/is-tap-string')
-var pad = require('pad-right')
 var previousLog = ''
 
 var parser = require('tap-console-parser')()
