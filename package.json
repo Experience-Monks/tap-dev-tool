@@ -10,8 +10,11 @@
     "url": "https://github.com/mattdesl"
   },
   "dependencies": {
+    "for-each": "^0.3.2",
+    "pad-right": "^0.1.1",
+    "tap-console-parser": "^1.0.0",
     "through2": "^0.6.5",
-    "tap-console-parser": "^1.0.0"
+    "trim-right": "^1.0.0"
   },
   "devDependencies": {
     "budo": "^4.0.0",
