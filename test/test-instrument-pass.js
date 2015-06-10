@@ -1,4 +1,4 @@
-require('../register')
+require('../register')()
 
 var test = require('tape')
 
