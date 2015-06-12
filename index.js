@@ -10,7 +10,7 @@ module.exports = function errorify (b) {
   var bundle = b.bundle.bind(b)
   b.bundle = function (cb) {
     written = false
-    
+
     var output = through(write)
     var pipeline = bundle(cb)
     pipeline.pipe(output)
@@ -28,7 +28,7 @@ module.exports = function errorify (b) {
     return output
   }
 
-  function write(buf, enc, next) {
+  function write (buf, enc, next) {
     if (!written) {
       this.push(prelude)
       written = true
@@ -38,9 +38,9 @@ module.exports = function errorify (b) {
   }
 
   function errMessage (err) {
-    if (err.codeFrame) { //babelify@6.x
+    if (err.codeFrame) { // babelify@6.x
       return [err.message, err.codeFrame].join('\n\n')
-    } else { //babelify@5.x and browserify
+    } else { // babelify@5.x and browserify
       return err.annotated || err.message
     }
   }
